@@ -17,9 +17,9 @@ class Example(QWidget):
     def getImage(self):
         lat = '37.530887'
         lon = '55.703118'
-        ll = lat + ',' + lon
-        zoom = 16
-        map_request = f"http://static-maps.yandex.ru/1.x/?ll={ll}&z={zoom}&l=map"
+        self.ll = lat + ',' + lon
+        self.zoom = 16
+        map_request = f"http://static-maps.yandex.ru/1.x/?ll={self.ll}&z={self.zoom}&l=map"
         response = requests.get(map_request)
 
         if not response:
